@@ -13,9 +13,10 @@ export function Banner() {
       <Flex
         w="100%"
         mx="auto"
+        maxW="1240px"
         justify={["center","space-between"]}
         align="center"
-        px={["4", "10", "15", "20", "36"]}
+        px={["4"]}
       >
         <div>
           <Heading

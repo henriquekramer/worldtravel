@@ -10,7 +10,7 @@ export function Caracteristicas(){
       alignItems="center"
       mt={["10", "32"]}
       mx="auto"
-      maxW="1160px"
+      maxW="1240px"
       gap={[1, 5]}
     >
       <GridItem>

@@ -5,6 +5,7 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import Link from "next/link";
+import { Slide } from "./Slide";
 
 
 export function Slider() {
@@ -20,73 +21,18 @@ export function Slider() {
         style={{width: '100%', flex:'1'}}
       >
         <SwiperSlide>
-          <Flex
-            w="100%"
-            h="100%"
-            align="center"
-            justify="center"
-            direction="column"
-            bgImage="url(/europe.png)"
-            bgRepeat="no-repeat"
-            bgSize="cover"
-            textAlign="center"
-            bgPosition="center"
-          >
-            <Link href="/continent/europe">
-              <a>
-                <Heading
-                  fontSize={["3xl", "4xl", "5xl"]}
-                  color="gray.100"
-                  fontWeight="700"
-                >
-                  Europa
-                </Heading>
-                <Text
-                  fontSize={["0.8rem", "1xl", "2xl"]}
-                  color="gray.300"
-                  fontWeight="700"
-                  mt={[2, 4]}
-                >
-                  O continente mais antigo.
-                </Text>
-              </a>
-            </Link>
-          </Flex>
+          <Slide continent="europe" continentName="Europa" description="O continente mais antigo."/>
         </SwiperSlide>
 
         <SwiperSlide>
-          <Flex
-            w="100%"
-            h="100%"
-            align="center"
-            justify="center"
-            direction="column"
-            bgImage="url(/europe.png)"
-            bgRepeat="no-repeat"
-            bgSize="cover"
-            textAlign="center"
-            bgPosition="center"
-          >
-            <Link href="/continent/europe">
-              <a>
-                <Heading
-                  fontSize={["3xl", "4xl", "5xl"]}
-                  color="gray.100"
-                  fontWeight="700"
-                >
-                  Europa
-                </Heading>
-                <Text
-                  fontSize={["0.8rem", "1xl", "2xl"]}
-                  color="gray.300"
-                  fontWeight="700"
-                  mt={[2, 4]}
-                >
-                  O continente mais antigo.
-                </Text>
-              </a>
-            </Link>
-          </Flex>
+          <Slide continent="asia" continentName="Asia" description="O maior continente."/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Slide continent="americadosul" continentName="América do Sul" description="O continente mais lindo."/>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <Slide continent="africa" continentName="África" description="O continente mais incrível."/>
         </SwiperSlide>
 
       </Swiper>

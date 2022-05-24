@@ -6,8 +6,8 @@ export function ContinentBanner(){
       w="100%"
       h={["150px", "300px", "500px"]}
       px={[0, 0, 36]}
-      pt={[0, 0, 72]}
-      bgImage="url(/bannerEU.png)"
+      pt={[0, 0, 52]}
+      bgImage="url(/banners/bannerEU.png)"
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"

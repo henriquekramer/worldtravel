@@ -22,7 +22,7 @@ export function Header(){
         h="100%"
         w="100%"
         mx="auto"
-        maxW="1160px"
+        maxW="1240px"
         alignItems="center"
         templateColumns="repeat(3, 1fr)"
         justifyContent="center"
