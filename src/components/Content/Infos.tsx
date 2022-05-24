@@ -1,4 +1,7 @@
-import { Flex, Heading, Text } from "@chakra-ui/react";
+import { Button, Flex, Heading, Icon, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverHeader, PopoverTrigger as OrigPopoverTrigger, Text } from "@chakra-ui/react";
+import { RiInformationLine } from "react-icons/ri";
+
+export const PopoverTrigger: React.FC<{ children: React.ReactNode }> = OrigPopoverTrigger
 
 export function Infos(){
   return (
@@ -66,6 +69,20 @@ export function Infos(){
           color="gray.700"
         >
           cidades +100
+          <Popover>
+            <PopoverTrigger>
+              <span>
+                <Icon cursor="pointer" as={RiInformationLine} ml="1" color="gray.400" w={["10px","16px"]} h={["10px","16px"]}/>
+              </span>
+            </PopoverTrigger>
+            <PopoverContent bg="gray.100" color="yellow.400">
+              <PopoverArrow/>
+              <PopoverCloseButton />
+              <PopoverBody fontWeight="700" fontSize="lg">
+                Londres, Paris, Roma, Praga.
+              </PopoverBody>
+            </PopoverContent>
+          </Popover>
         </Text>
       </Flex>
       
