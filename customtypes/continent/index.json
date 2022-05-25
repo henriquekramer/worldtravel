@@ -1,0 +1,122 @@
+{
+  "id": "continent",
+  "label": "continent",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "slug",
+          "placeholder": ""
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "summary": {
+        "type": "Text",
+        "config": {
+          "label": "summary",
+          "placeholder": ""
+        }
+      },
+      "description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Description",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "multi": "paragraph,strong,em"
+        }
+      },
+      "sliderimage": {
+        "type": "Image",
+        "config": {
+          "label": "Sliderimage",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "bannerimage": {
+        "type": "Image",
+        "config": {
+          "label": "Bannerimage",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "countries": {
+        "type": "Number",
+        "config": {
+          "label": "Countries",
+          "placeholder": ""
+        }
+      },
+      "languages": {
+        "type": "Number",
+        "config": {
+          "label": "Languages",
+          "placeholder": ""
+        }
+      },
+      "cities": {
+        "type": "Number",
+        "config": {
+          "label": "Cities",
+          "placeholder": ""
+        }
+      },
+      "citieslist": {
+        "type": "Text",
+        "config": {
+          "label": "Citieslist",
+          "placeholder": ""
+        }
+      },
+      "cities100": {
+        "type": "Group",
+        "config": {
+          "label": "Cities100",
+          "fields": {
+            "thumbnail": {
+              "type": "Image",
+              "config": {
+                "label": "Thumbnail",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "flag": {
+              "type": "Image",
+              "config": {
+                "label": "Flag",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "city": {
+              "type": "Text",
+              "config": {
+                "label": "City",
+                "placeholder": ""
+              }
+            },
+            "country": {
+              "type": "Text",
+              "config": {
+                "label": "Country",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

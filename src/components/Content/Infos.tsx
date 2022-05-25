@@ -1,9 +1,8 @@
-import { Button, Flex, Heading, Icon, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverHeader, PopoverTrigger as OrigPopoverTrigger, Text } from "@chakra-ui/react";
+import { Button, Flex, Heading, Icon, Text, Tooltip } from "@chakra-ui/react";
 import { RiInformationLine } from "react-icons/ri";
+import { ContinentProps } from "../../pages/continent/[slug]";
 
-export const PopoverTrigger: React.FC<{ children: React.ReactNode }> = OrigPopoverTrigger
-
-export function Infos(){
+export function Infos({continent}: ContinentProps){
   return (
     <Flex
       align="center"
@@ -19,7 +18,7 @@ export function Infos(){
           color="yellow.400"
           fontWeight="500"
         >
-          50
+          {continent.countries}
         </Heading>
         <Text
           fontWeight="600"
@@ -40,7 +39,7 @@ export function Infos(){
           color="yellow.400"
           fontWeight="500"
         >
-          60
+          {continent.languages}
         </Heading>
         <Text
           fontWeight="600"
@@ -61,7 +60,7 @@ export function Infos(){
           color="yellow.400"
           fontWeight="500"
         >
-          27
+          {continent.cities}
         </Heading>
         <Text
           fontWeight="600"
@@ -69,20 +68,11 @@ export function Infos(){
           color="gray.700"
         >
           cidades +100
-          <Popover>
-            <PopoverTrigger>
-              <span>
-                <Icon cursor="pointer" as={RiInformationLine} ml="1" color="gray.400" w={["10px","16px"]} h={["10px","16px"]}/>
-              </span>
-            </PopoverTrigger>
-            <PopoverContent bg="gray.100" color="yellow.400">
-              <PopoverArrow/>
-              <PopoverCloseButton />
-              <PopoverBody fontWeight="700" fontSize="lg">
-                Londres, Paris, Roma, Praga.
-              </PopoverBody>
-            </PopoverContent>
-          </Popover>
+          <Tooltip label={continent.cities_list} fontWeight="700" fontSize="lg" color="yellow.400" bg="gray.100" textAlign="justify">
+            <span>
+              <Icon cursor="pointer" as={RiInformationLine} ml="1" color="gray.400" w={["10px","16px"]} h={["10px","16px"]}/>
+            </span>
+          </Tooltip>
         </Text>
       </Flex>
       

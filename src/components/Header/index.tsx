@@ -1,4 +1,4 @@
-import { Flex, Grid, Icon, Image } from '@chakra-ui/react'
+import { Flex, Grid, Icon, Image, Tooltip } from '@chakra-ui/react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { RiArrowLeftSLine } from 'react-icons/ri'
@@ -30,9 +30,13 @@ export function Header(){
 
         {notHome && (
           <Link href="/">
-            <a>
-              <Icon as={RiArrowLeftSLine} fontSize={[20, 35]} justifySelf="start" />
-            </a>
+              <a>
+                <Tooltip label="Voltar" fontWeight="700" fontSize="xl" color="yellow.400" bg="gray.100" textAlign="justify">
+                  <span>
+                    <Icon as={RiArrowLeftSLine} fontSize={[20, 35]} justifySelf="start" />
+                  </span>
+                </Tooltip>
+              </a>
           </Link>
         )}
 
